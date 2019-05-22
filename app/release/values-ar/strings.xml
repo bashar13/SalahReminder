@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">وقت الصلاة</string>
+    <string name="nav_header_title">صلاة</string>
+    <string name="location_des">يحتاج التطبيق إلى موقعك لحساب أوقات الصلاة الدقيقة.</string>
+    <string name="privacy_check">أوافق على الشروط والأحكام وسياسة الخصوصية للتطبيق</string>
+    <string name="title_activity_about">حول التطبيق</string>
+    <string name="add_number">أضف</string>
+    <string name="reset_time">"إعادة تعيين "</string>
+    <string name="settings_label">"إعدادات "</string>
+    <string name="prefs_menu_title">"إعدادات "</string>
+    <string name="about_menu_title">"حول "</string>
+    <string name="fajr">فجر</string>
+    <string name="dhur">ظهر</string>
+    <string name="asr">عصر</string>
+    <string name="mag">مغرب</string>
+    <string name="esha">عشاء</string>
+    <string name="sunrise">"شروق الشمس "</string>
+    <string name="sunset">"غروب الشمس "</string>
+</resources>

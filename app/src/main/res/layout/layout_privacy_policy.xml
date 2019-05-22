@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:isScrollContainer="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Policy"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Information Collection and use"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:id="@+id/pp_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_info_collection"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Log Data"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_log_data"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cookies"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_cookies"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Security"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_security"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Links to other sites"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_links_others"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Children's Privacy"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_children"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Changes to this privacy policy"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_changes"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textAlignment="textStart"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pp_contact"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="textStart"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

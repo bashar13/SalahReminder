@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">زمان نماز</string>
+    <string name="nav_header_title">نماز</string>
+    <string name="location_des">این برنامه نیاز به مکان شما برای محاسبه زمان نماز دقیق دارد</string>
+    <string name="privacy_check">من با شرایط و ضوابط و سیاست حفظ حریم خصوصی برنامه موافقم</string>
+    <string name="title_activity_about">درباره برنامه</string>
+    <string name="add_number">اضافه کردن</string>
+    <string name="reset_time">بازنشانی</string>
+    <string name="settings_label">تنظیمات</string>
+    <string name="prefs_menu_title">تنظیمات</string>
+    <string name="about_menu_title">در باره</string>
+    <string name="fajr">فجر</string>
+    <string name="dhur">ظهر</string>
+    <string name="asr">عصر</string>
+    <string name="mag">مغرب</string>
+    <string name="esha">عشاء</string>
+    <string name="sunrise">طلوع خورشید</string>
+    <string name="sunset">غروب آفتاب</string>
+</resources>

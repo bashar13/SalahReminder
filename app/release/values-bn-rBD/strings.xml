@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">নামাজের সময়</string>
+    <string name="nav_header_title">~ সালাহ্ ~</string>
+    <string name="privacy_check">আমি সালাহ সময় এর শর্তাবলী এবং গোপনীয়তা নীতির সাথে একমত</string>
+    <string name="title_activity_about">অ্যাপ সম্পর্কে</string>
+    <string name="location_des">The app needs your location to calculate accurate prayer times</string>
+    <string name="add_number">যোগ</string>
+    <string name="reset_time">রিসেট</string>
+    <string name="settings_label">সেটিংস</string>
+    <string name="prefs_menu_title">সেটিংস</string>
+    <string name="about_menu_title">সম্পর্কিত</string>
+    <string name="fajr">ফজর</string>
+    <string name="dhur">যোহর</string>
+    <string name="asr">আছর</string>
+    <string name="mag">মাগরিব</string>
+    <string name="esha">এশা</string>
+    <string name="sunrise">সূর্যোদয়</string>
+    <string name="sunset">সূর্যাস্ত</string>
+</resources>

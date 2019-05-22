@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="310.0dip"
+        android:minWidth="300.0dip">
+        <CheckBox
+            android:textSize="22.0sp"
+            android:textStyle="bold"
+            android:textColor="#ff000000"
+            android:id="@+id/allDialogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="15.0dip"
+            android:checked="false"
+            android:text="All"
+            android:layout_alignParentLeft="true" />
+        <CheckBox
+            android:textSize="20.0sp"
+            android:id="@+id/fajrDialogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15.0dip"
+            android:checked="false"
+            android:text="Fajr"
+            android:layout_below="@id/allDialogCheckbox"
+            android:layout_alignLeft="@id/allDialogCheckbox" />
+        <CheckBox
+            android:textSize="20.0sp"
+            android:id="@+id/dhurDialogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" android:text="Dhur"
+            android:layout_below="@id/fajrDialogCheckbox"
+            android:layout_alignLeft="@id/fajrDialogCheckbox" />
+        <CheckBox android:textSize="20.0sp"
+            android:id="@+id/asrDialogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" android:text="Asr"
+            android:layout_below="@id/dhurDialogCheckbox"
+            android:layout_alignLeft="@id/fajrDialogCheckbox" />
+        <CheckBox
+            android:textSize="20.0sp"
+            android:id="@+id/maghribDialogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="Maghrib"
+            android:layout_below="@id/asrDialogCheckbox"
+            android:layout_alignLeft="@id/fajrDialogCheckbox" />
+        <CheckBox android:textSize="20.0sp"
+            android:id="@+id/eshaDialogCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false" android:text="Esha"
+            android:layout_below="@id/maghribDialogCheckbox"
+            android:layout_alignLeft="@id/fajrDialogCheckbox" />
+        <Button android:id="@+id/okDialog"
+            android:layout_width="90.0dip"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20.0dip"
+            android:layout_marginTop="22.0dip"
+            android:textColor="@color/colorPrimary"
+            android:text="OK" android:layout_below="@id/eshaDialogCheckbox"
+            android:layout_alignLeft="@id/eshaDialogCheckbox"
+            android:layout_alignParentLeft="true" />
+        <Button android:id="@+id/cancelDialog"
+            android:layout_width="90.0dip"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20.0dip"
+            android:text="Cancel" android:layout_alignBaseline="@id/okDialog"
+            android:layout_alignBottom="@id/okDialog"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</ScrollView>

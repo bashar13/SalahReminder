@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Salah Time</string>
+    <string name="nav_header_title">सालाह</string>
+    <string name="location_des">सही प्रार्थना समय की गणना करने के लिए ऐप को आपके स्थान की आवश्यकता है</string>
+    <string name="privacy_check">मैं सलाहा समय के नियम और शर्त और गोपनीयता नीति से सहमत हूं</string>
+    <string name="title_activity_about">ऐप के बारे में</string>
+    <string name="add_number">जोड़ना</string>
+    <string name="reset_time">रीसेट</string>
+    <string name="settings_label">सेटिंग्स</string>
+    <string name="prefs_menu_title">सेटिंग्स</string>
+    <string name="about_menu_title">के बारे में</string>
+    <string name="esha">ईशा</string>
+    <string name="mag">मग़रिब</string>
+    <string name="dhur">दोपहर</string>
+    <string name="fajr">भोर</string>
+    <string name="asr">असर</string>
+    <string name="sunrise">सूर्योदय</string>
+    <string name="sunset">सूर्य का अस्त होना</string>
+</resources>

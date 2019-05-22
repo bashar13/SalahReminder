@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نماز کا وقت</string>
+    <string name="nav_header_title">نماز</string>
+    <string name="location_des">صحیح دعا کے اوقات کا حساب کرنے کے لئے اے پی پی آپ کے مقام کی ضرورت ہے</string>
+    <string name="privacy_check">میں شرائط اور حالت اور اے پی پی کی رازداری کی پالیسی سے اتفاق کرتا ہوں</string>
+    <string name="title_activity_about">ایپ کے بارے میں</string>
+    <string name="add_number">شامل کریں</string>
+    <string name="reset_time">ری سیٹ کریں</string>
+    <string name="settings_label">ترتیبات</string>
+    <string name="prefs_menu_title">ترتیبات</string>
+    <string name="about_menu_title">کے بارے میں</string>
+    <string name="fajr">فجر</string>
+    <string name="dhur">ظهر</string>
+    <string name="asr">عصر</string>
+    <string name="mag">مغرب</string>
+    <string name="esha">عشاء</string>
+    <string name="sunrise">طلوع آفتاب</string>
+    <string name="sunset">غروب آفتاب</string>
+</resources>
