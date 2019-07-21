@@ -35,7 +35,7 @@ public class FragmentReminder extends Fragment {
 
     //ImageButton but_edit;
     //EditText edit_msg;
-    //RadioButton radio_noti, radio_alarm, radio_both;
+    RadioButton radio_noti, radio_alarm, radio_both, radio_adhan, radio_default_ring;
     //String edit_txt_msg;
     //Switch switch_msg;
     @Nullable
@@ -45,11 +45,11 @@ public class FragmentReminder extends Fragment {
 
         //but_edit = (ImageButton)view.findViewById(R.id.but_edit);
         //edit_msg = (EditText)view.findViewById(R.id.alert_sms);
-        final RadioButton radio_alarm = (RadioButton)view.findViewById(R.id.radio_alarm);
-        final RadioButton radio_noti = (RadioButton)view.findViewById(R.id.radio_noti);
-        final RadioButton radio_both = (RadioButton)view.findViewById(R.id.radio_both);
-        final RadioButton radio_adhan = (RadioButton)view.findViewById(R.id.radio_adhan);
-        final RadioButton radio_default_ring = (RadioButton)view.findViewById(R.id.radio_default_ring);
+        radio_alarm = (RadioButton)view.findViewById(R.id.radio_alarm);
+        radio_noti = (RadioButton)view.findViewById(R.id.radio_noti);
+        radio_both = (RadioButton)view.findViewById(R.id.radio_both);
+        radio_adhan = (RadioButton)view.findViewById(R.id.radio_adhan);
+        radio_default_ring = (RadioButton)view.findViewById(R.id.radio_default_ring);
         //switch_msg = (Switch)view.findViewById(R.id.switch_data);
 
         //edit_msg.setText(edit_txt_msg);

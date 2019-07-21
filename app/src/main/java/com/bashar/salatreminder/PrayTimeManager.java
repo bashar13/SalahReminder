@@ -1,6 +1,7 @@
 package com.bashar.salatreminder;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -16,10 +17,7 @@ public class PrayTimeManager {
         cal.setTime(now);
 
         double timezone = TimeZone.getDefault().getOffset(now.getTime()) / 3600000;
-        //time_zone_name = TimeZone.getDefault().getDisplayName();
-        //Toast.makeText(getActivity(), "You are in " + time_zone_name, Toast.LENGTH_SHORT).show();
-        //getCity(myLat, myLong);
-        //timeZoneText.setText(time_zone_name);
+        Log.d("Timezone", TimeZone.getDefault().getDisplayName());
 
         PrayTime prayers = new PrayTime();
 

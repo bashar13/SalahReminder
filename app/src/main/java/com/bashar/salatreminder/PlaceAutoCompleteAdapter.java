@@ -14,14 +14,14 @@ import java.util.ArrayList;
 
 public class PlaceAutoCompleteAdapter extends ArrayAdapter<String> implements Filterable {
 
-    ArrayList<String> resultList;
+    private ArrayList<String> resultList;
 
-    Context mContext;
-    int mResource;
+    private Context mContext;
+    private int mResource;
 
-    PlaceAPI mPlaceAPI = new PlaceAPI();
+    private PlaceAPI mPlaceAPI = new PlaceAPI();
 
-    public PlaceAutoCompleteAdapter(Context context, int resource) {
+    PlaceAutoCompleteAdapter(Context context, int resource) {
         super(context, resource);
 
         mContext = context;

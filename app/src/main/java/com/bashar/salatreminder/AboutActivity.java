@@ -16,17 +16,12 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        /*ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#06789c"));
-        getSupportActionBar().setBackgroundDrawable(colorDrawable);*/
-
         Button rateApp = (Button) findViewById(R.id.buttonRateApp);
         Button moreDev = (Button) findViewById(R.id.buttonMoreDev);
 
         rateApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent5 = new Intent (AboutActivity.this, MyAlarmActivity.class);
-//                startActivity(intent5);
                 final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
                 try {
                     startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));

@@ -152,7 +152,6 @@ public class MainActivity extends AppCompatActivity
 
         checkPrivacy.setText(cs);
         checkPrivacy.setLinkTextColor(getResources().getColor(R.color.colorPrimary));
-// Finally, make links clickable
         checkPrivacy.setMovementMethod(LinkMovementMethod.getInstance());
 
 
@@ -246,7 +245,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         //Toast.makeText(this, "fragmentid" + id, Toast.LENGTH_SHORT).show();
-        SharedPreferencesManager.storeIntPref(this, "currentFragment", id);
+        SharedPreferencesManager.storeIntPref(this, "CURRENT_FRAGMENT", id);
 
         updateViewFragment(id);
 
@@ -284,7 +283,7 @@ public class MainActivity extends AppCompatActivity
         } else {
             if (doubleBackToExitPressedOnce) {
                 super.onBackPressed();
-                SharedPreferencesManager.storeIntPref(this,"currentFragment", R.id.nav_time);
+                SharedPreferencesManager.storeIntPref(this,"CURRENT_FRAGMENT", R.id.nav_time);
                 return;
             }
             this.doubleBackToExitPressedOnce = true;

@@ -41,16 +41,6 @@ public class FragmentSalahTime extends Fragment {
         setHasOptionsMenu(true);
         view = inflater.inflate(R.layout.salah_time, container, false);
 
-        /*FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), QiblaDirectionActivity.class);
-                startActivity(intent);
-            }
-        });*/
-
-        //txtPrayerTimes = (TextView) view.findViewById(R.id.txtPrayerTimes);
         txtCurDate = view.findViewById(R.id.cur_date);
         txtSunrise = view.findViewById(R.id.sunset_sunrise);
         textFajr = view.findViewById(R.id.textFajrTime);
@@ -64,128 +54,11 @@ public class FragmentSalahTime extends Fragment {
         but_asr = view.findViewById(R.id.asrAlarm);
         but_mag = view.findViewById(R.id.magAlarm);
         but_esha = view.findViewById(R.id.eshaAlarm);
-        //button = (Button)view.findViewById(R.id.button3);
 
         timeZoneText = view.findViewById(R.id.time_zone);
 
-        but_fajr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPreferencesManager.getBooleanPref(getContext(), "FAJR_ALARM", false)) {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "FAJR_ALARM", false);
-                    ReminderManager.cancelReminder(getContext(), 1);
-                    but_fajr.setImageResource(R.drawable.ic_alarm_off);
-                }
-                else {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "FAJR_ALARM", true);
-                    but_fajr.setImageResource(R.drawable.ic_alarm);
-                    String time = textFajr.getText().toString();
-
-                    ReminderManager.setReminder(getContext(), 1, time, "Fajr");
-                }
-            }
-        });
-        but_dhur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPreferencesManager.getBooleanPref(getContext(), "DHUR_ALARM", false)) {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "DHUR_ALARM", false);
-                    ReminderManager.cancelReminder(getContext(), 2);
-                    but_dhur.setImageResource(R.drawable.ic_alarm_off);
-                }
-                else {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "DHUR_ALARM", true);
-                    but_dhur.setImageResource(R.drawable.ic_alarm);
-                    String time = textDhur.getText().toString();
-                    ReminderManager.setReminder(getContext(), 2, time, "Dhur");
-                }
-
-            }
-        });
-        but_asr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(SharedPreferencesManager.getBooleanPref(getContext(), "ASR_ALARM", false)) {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "ASR_ALARM", false);
-                    ReminderManager.cancelReminder(getContext(), 3);
-                    but_asr.setImageResource(R.drawable.ic_alarm_off);
-                }
-                else {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "ASR_ALARM", true);
-                    but_asr.setImageResource(R.drawable.ic_alarm);
-                    String time = textAsr.getText().toString();
-                    ReminderManager.setReminder(getContext(), 3, time, "Asr");
-                }
-
-            }
-        });
-        but_mag.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (SharedPreferencesManager.getBooleanPref(getContext(), "MAG_ALARM", false)) {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "MAG_ALARM", false);
-                    ReminderManager.cancelReminder(getContext(), 4);
-                    but_mag.setImageResource(R.drawable.ic_alarm_off);
-                } else {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "MAG_ALARM", true);
-                    but_mag.setImageResource(R.drawable.ic_alarm);
-                    String time = textMag.getText().toString();
-                    ReminderManager.setReminder(getContext(), 4, time, "Maghrib");
-                }
-            }
-        });
-        but_esha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (SharedPreferencesManager.getBooleanPref(getContext(), "ESHA_ALARM", false)) {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "ESHA_ALARM", false);
-                    ReminderManager.cancelReminder(getContext(), 5);
-                    but_esha.setImageResource(R.drawable.ic_alarm_off);
-                } else {
-                    SharedPreferencesManager.storeBooleanPref(getContext(), "ESHA_ALARM", true);
-                    but_esha.setImageResource(R.drawable.ic_alarm);
-                    String time = textEsha.getText().toString();
-                    ReminderManager.setReminder(getContext(), 5, time, "Esha");
-                }
-
-
-            }
-        });
-
-        textFajr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTimePicker("fajr");
-            }
-        });
-
-        textDhur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTimePicker("dhur");
-            }
-        });
-
-        textAsr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTimePicker("asr");
-            }
-        });
-
-        textMag.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTimePicker("mag");
-            }
-        });
-
-        textEsha.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getTimePicker("esha");
-            }
-        });
+        alarmButtonsOnCLickListenerMethods();
+        editTimeTextOnClickListenerMethods();
         getSetPreferenceValues();
         return view;
 }
@@ -430,6 +303,129 @@ public class FragmentSalahTime extends Fragment {
 
         AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    private void alarmButtonsOnCLickListenerMethods() {
+        but_fajr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(SharedPreferencesManager.getBooleanPref(getContext(), "FAJR_ALARM", false)) {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "FAJR_ALARM", false);
+                    ReminderManager.cancelReminder(getContext(), 1);
+                    but_fajr.setImageResource(R.drawable.ic_alarm_off);
+                }
+                else {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "FAJR_ALARM", true);
+                    but_fajr.setImageResource(R.drawable.ic_alarm);
+                    String time = textFajr.getText().toString();
+
+                    ReminderManager.setReminder(getContext(), 1, time, "Fajr");
+                }
+            }
+        });
+        but_dhur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(SharedPreferencesManager.getBooleanPref(getContext(), "DHUR_ALARM", false)) {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "DHUR_ALARM", false);
+                    ReminderManager.cancelReminder(getContext(), 2);
+                    but_dhur.setImageResource(R.drawable.ic_alarm_off);
+                }
+                else {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "DHUR_ALARM", true);
+                    but_dhur.setImageResource(R.drawable.ic_alarm);
+                    String time = textDhur.getText().toString();
+                    ReminderManager.setReminder(getContext(), 2, time, "Dhur");
+                }
+
+            }
+        });
+        but_asr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(SharedPreferencesManager.getBooleanPref(getContext(), "ASR_ALARM", false)) {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "ASR_ALARM", false);
+                    ReminderManager.cancelReminder(getContext(), 3);
+                    but_asr.setImageResource(R.drawable.ic_alarm_off);
+                }
+                else {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "ASR_ALARM", true);
+                    but_asr.setImageResource(R.drawable.ic_alarm);
+                    String time = textAsr.getText().toString();
+                    ReminderManager.setReminder(getContext(), 3, time, "Asr");
+                }
+
+            }
+        });
+        but_mag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (SharedPreferencesManager.getBooleanPref(getContext(), "MAG_ALARM", false)) {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "MAG_ALARM", false);
+                    ReminderManager.cancelReminder(getContext(), 4);
+                    but_mag.setImageResource(R.drawable.ic_alarm_off);
+                } else {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "MAG_ALARM", true);
+                    but_mag.setImageResource(R.drawable.ic_alarm);
+                    String time = textMag.getText().toString();
+                    ReminderManager.setReminder(getContext(), 4, time, "Maghrib");
+                }
+            }
+        });
+        but_esha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (SharedPreferencesManager.getBooleanPref(getContext(), "ESHA_ALARM", false)) {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "ESHA_ALARM", false);
+                    ReminderManager.cancelReminder(getContext(), 5);
+                    but_esha.setImageResource(R.drawable.ic_alarm_off);
+                } else {
+                    SharedPreferencesManager.storeBooleanPref(getContext(), "ESHA_ALARM", true);
+                    but_esha.setImageResource(R.drawable.ic_alarm);
+                    String time = textEsha.getText().toString();
+                    ReminderManager.setReminder(getContext(), 5, time, "Esha");
+                }
+
+
+            }
+        });
+    }
+
+    private void editTimeTextOnClickListenerMethods() {
+        textFajr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTimePicker("fajr");
+            }
+        });
+
+        textDhur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTimePicker("dhur");
+            }
+        });
+
+        textAsr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTimePicker("asr");
+            }
+        });
+
+        textMag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTimePicker("mag");
+            }
+        });
+
+        textEsha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTimePicker("esha");
+            }
+        });
     }
 
     @Override
